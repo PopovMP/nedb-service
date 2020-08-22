@@ -1,6 +1,6 @@
 {
   "name": "@popovmp/nedb-service",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reads configs from a config.json file.",
   "main": "index.js",
   "author": "Popov MP <info@forexsb.com>",
@@ -8,7 +8,7 @@
   "homepage": "https://github.com/popovmp/nedb-service",
   "dependencies": {
     "nedb": "^1.8.0",
-    "@popovmp/micro-logger": "^1.2.0"
+    "@popovmp/micro-logger": "^1.2.1"
   },
   "devDependencies": {
     "@popovmp/micro-tester": "^1.0.1"
