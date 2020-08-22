@@ -1,0 +1,30 @@
+{
+  "name": "@popovmp/nedb-service",
+  "version": "1.0.0",
+  "description": "Reads configs from a config.json file.",
+  "main": "index.js",
+  "author": "Popov MP <info@forexsb.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/popovmp/nedb-service",
+  "dependencies": {
+    "nedb": "^1.8.0",
+    "@popovmp/micro-logger": "^1.2.0"
+  },
+  "devDependencies": {
+    "@popovmp/micro-tester": "^1.0.1"
+  },
+  "scripts": {
+    "test": "node ./test/index.test.js",
+    "prepublishOnly": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/popovmp/nedb-service.git"
+  },
+  "keywords": [
+    "nedb"
+  ],
+  "bugs": {
+    "url": "https://github.com/popovmp/nedb-service/issues"
+  }
+}
