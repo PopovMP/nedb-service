@@ -1,7 +1,7 @@
 {
   "name": "@popovmp/nedb-service",
-  "version": "1.0.1",
-  "description": "Reads configs from a config.json file.",
+  "version": "1.0.3",
+  "description": "Loads `nedb` DB from a folder on startup and provides connections.",
   "main": "index.js",
   "author": "Popov MP <info@forexsb.com>",
   "license": "MIT",
