@@ -1,6 +1,7 @@
 "use strict"
 
-const {init, test, done} = require("@popovmp/micro-tester");
+const assert = require("assert");
+const {init, test, ensure} = require("@popovmp/micro-tester");
 
 const dbService = require("../index.js");
 dbService.init(__dirname, ".db");
@@ -15,8 +16,6 @@ test("Read a record", () => {
 
     db.findOne(query, projection,
         db_findOne_ready);
-
-    return true;
 });
 
 function db_findOne_ready(err, data) {
@@ -24,13 +23,11 @@ function db_findOne_ready(err, data) {
         throw new Error("Error with reading data: " + err);
     }
 
-    if (data.answer === 42) {
-        console.log("Found answer: " + data.answer);
-    } else {
-        throw new Error("Error data match. Expected: " + 42 + ", Actual: " + data.answer);
-    }
+    test("Finds correct record", () => {
+        assert.strictEqual(data.answer, 42);
+    });
 
-    done();
+    ensure();
 
     // Because we cannot close NEDB
     process.exit(0);
