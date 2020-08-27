@@ -1,6 +1,6 @@
 {
   "name": "@popovmp/nedb-service",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Loads `nedb` DB from a folder on startup and provides connections.",
   "main": "index.js",
   "author": "Popov MP <info@forexsb.com>",
@@ -8,13 +8,13 @@
   "homepage": "https://github.com/popovmp/nedb-service",
   "dependencies": {
     "nedb": "^1.8.0",
-    "@popovmp/micro-logger": "^1.3.0"
+    "@popovmp/micro-logger": "^1.3.1"
   },
   "devDependencies": {
-    "@popovmp/micro-tester": "^2.0.0"
+    "@popovmp/micro-tester": "^2.2.0"
   },
   "scripts": {
-    "test": "node ./test/index.test.js",
+    "test": "micro-tester",
     "prepublishOnly": "npm test"
   },
   "repository": {
